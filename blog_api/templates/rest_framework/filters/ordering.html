@@ -1,0 +1,30 @@
+{% load rest_framework %}
+{% load i18n %}
+
+<div class="card">
+    <div class="card-header" id="headingOrdering">
+        <h5 class="mb-0">
+            <button class="btn btn-link w-100 text-primary text-left" type="button"
+                    data-toggle="collapse" data-target="#collapseOrdering" aria-expanded="false"
+                    aria-controls="collapseOne">
+                {% trans "Ordering" %}
+                <i class="ni ni-bold-down float-right"></i>
+            </button>
+        </h5>
+    </div>
+
+    <div id="collapseOrdering" class="collapse" aria-labelledby="headingOrdering"
+         data-parent="#accordion">
+        <div class="card-body mb-2">
+            {% for key, label in options %}
+            {% if key == current %}
+            <a href="{% add_query_param request param key %}" class="btn btn-primary btn-sm mt-2 mb-2 active">
+                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> {{ label }}
+            </a>
+            {% else %}
+                <a href="{% add_query_param request param key %}" class="btn btn-outline-primary btn-sm mt-2 mb-2">{{ label }}</a>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

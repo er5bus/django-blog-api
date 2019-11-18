@@ -1,0 +1,23 @@
+<!-- Modal -->
+<div class="modal fade" id="filtersModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="accordion-1">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 ml-auto">
+                                <div class="accordion my-3" id="accordion">
+                                    {% for element in elements %}
+                                    {{ element|safe }}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

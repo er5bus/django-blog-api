@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load i18n static %}
+{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+<html lang="{{ LANGUAGE_CODE|default:'en-us'}}" {% if LANGUAGE_BIDI %}dir="rtl" {% endif %}>
+<head>
+    {% block meta %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Building a Social Website.">
+    <meta name="author" content="Rami Sfari">
+    <meta name="email" content="rami2sfari@gmail.com">
+    {% endblock %}
+
+    <title>{% block title %}{% endblock %}</title>
+
+    {% block favicon %}
+    <!-- Favicon -->
+    <link href="{% static 'images/favicon.ico' %}" rel="icon" type="image/png">
+    {% endblock %}
+
+    {% block stylesheet %}
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" type="text/css">
+    <!-- Icons -->
+    <link href="{% static 'vendor/nucleo/css/nucleo.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <!-- Argon CSS -->
+    <link href="{% static 'css/argon.css' %}" rel="stylesheet" type="text/css">
+    <!-- Main CSS -->
+    <link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css">
+    {% endblock %}
+</head>
+
+<body>
+{% block body %}{% endblock %}
+
+{% block javascript %}
+<!-- Core -->
+<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'vendor/popper/popper.min.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/bootstrap.min.js' %}"></script>
+{% endblock %}
+</body>
+</html>

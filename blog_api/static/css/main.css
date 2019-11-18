@@ -1,0 +1,117 @@
+.center-row {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: -15px;
+	-ms-flex-align: center !important;
+	align-content: center !important;
+	-ms-flex-pack: center !important;
+	justify-content: center !important;
+}
+
+.accordion-1 .accordion {
+	margin-top: 80px;
+	margin-bottom: 80px
+}
+
+.accordion-1 .accordion .card {
+	margin-top: 0;
+	margin-bottom: 0;
+	box-shadow: none;
+	border-bottom: 1px solid #f4f5f7!important
+}
+
+.accordion-1 .accordion .card .card-header {
+    background-color: #fff;
+}
+
+.accordion-1 .accordion .card .card-header {
+	border-bottom: none
+}
+
+.accordion-1 .accordion .card .card-header .btn[aria-expanded=true] .ni {
+	transform: rotate(180deg)
+}
+
+.accordion-1 .accordion .card .card-header .btn:active:focus {
+	box-shadow: none
+}
+
+.accordion-1 .accordion .card .card-body {
+	padding: 20px;
+}
+
+
+.form-control-label {
+    color: #525f7f;
+    font-size: .875rem;
+    font-weight: 600;
+}
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+ul.errorlist {
+	list-style: none;
+	text-align: left;
+	margin: 0px;
+	padding: 5px 0px 5px 0px;
+	font-size: small;
+	color: red;
+}
+.form-helper {
+	font-size: small;
+	padding: 5px 0px 5px 0px;
+}
+.section-shaped {
+	position: relative;
+}
+
+.form-search, .form-search::placeholder{
+    background: inherit;
+    color: #ffffff;
+    width: 20rem !important;
+    border-color: #ffffff;
+}
+
+.pagination {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.justify-content-left {
+    justify-content: flex-end!important;
+}
+
+/*
+ *  STYLE 10
+ */
+
+#scroll-bar-style::-webkit-scrollbar-track, textarea::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#scroll-bar-style::-webkit-scrollbar, textarea::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+#scroll-bar-style::-webkit-scrollbar-thumb, textarea::-webkit-scrollbar-thumb
+{
+	background-color: #c2c2c2;
+}
+
+.inline-block{
+    display: inline-block;
+}
+
+.help-block {
+    color: #f5365c;
+    font-size: small;
+    padding: 5px 0px 5px 0px;
+}

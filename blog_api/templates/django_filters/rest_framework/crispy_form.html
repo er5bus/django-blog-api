@@ -1,0 +1,21 @@
+{% load crispy_forms_tags %}
+{% load i18n %}
+
+<div class="card">
+    <div class="card-header" id="headingFilters">
+        <h5 class="mb-0">
+            <button class="btn btn-link w-100 text-primary text-left" type="button"
+                    data-toggle="collapse" data-target="#collapseFilters" aria-expanded="false"
+                    aria-controls="collapseOne">
+                {% trans "Filters" %}
+                <i class="ni ni-bold-down float-right"></i>
+            </button>
+        </h5>
+    </div>
+
+    <div id="collapseFilters" class="collapse" aria-labelledby="headingFilters" data-parent="#accordion">
+        <div class="card-body opacity-8">
+            {% crispy filter.form %}
+        </div>
+    </div>
+</div>

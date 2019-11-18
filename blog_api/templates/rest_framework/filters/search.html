@@ -1,0 +1,36 @@
+{% load i18n %}
+
+<div class="card">
+    <div class="card-header" id="headingSearch">
+        <h5 class="mb-0">
+            <button class="btn btn-link w-100 text-primary text-left" type="button"
+                    data-toggle="collapse" data-target="#collapseSearch" aria-expanded="false"
+                    aria-controls="collapseOne">
+                {% trans "Search" %}
+                <i class="ni ni-bold-down float-right"></i>
+            </button>
+        </h5>
+    </div>
+
+    <div id="collapseSearch" class="collapse" aria-labelledby="headingSearch"
+         data-parent="#accordion">
+        <div class="card-body opacity-8">
+            <form>
+                <div class="form-group">
+                    <div class="input-group input-group-alternative mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="ni ni-zoom-split-in"></i></span>
+                        </div>
+                        <input type="text" class="form-control form-control-alternative" name="{{ param }}"
+                               value="{{ term }}">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-default" type="submit">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

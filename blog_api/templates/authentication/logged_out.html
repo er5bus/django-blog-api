@@ -1,0 +1,21 @@
+{% extends "authentication/base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% load i18n %}
+
+{% block content %}
+<div class="center-row mt--300">
+    <div class="col-lg-6">
+        <div class="card bg-secondary shadow border-0">
+            <div class="card-header bg-white">
+                {% trans 'Log out' %}
+            </div>
+            <div class="card-body px-lg-5 py-lg-4">
+                <p>{% trans "Thanks for spending some quality time with the Web site today." %}</p>
+                <a href="{% url 'login' %}" class="btn btn-block btn-primary my-4">{% trans 'Log in again' %}</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
